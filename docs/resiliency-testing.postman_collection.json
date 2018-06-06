@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "resiliency-testing",
+		"_postman_id": "f02ff2cf-4108-79c8-7d0c-12765bb59a55",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create todos",
+			"request": {
+				"url": "localhost:8085/todo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\":\"todo2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get todos  through orchestration",
+			"request": {
+				"url": "localhost:8084/todos",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
